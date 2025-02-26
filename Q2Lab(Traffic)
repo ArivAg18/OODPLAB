@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N, M;
+    
+    cout << "Enter the number of zones: ";
+    cin >> N;
+    cout << "Enter the number of time intervals: ";
+    cin >> M;
+    
+    
+    int trafficData[N][M];
+    
+    
+    cout << "Enter the vehicle count for each zone and time interval:" << endl;
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
+            cout << "Zone " << i + 1 << ", Time Interval " << j + 1 << ": ";
+            cin >> trafficData[i][j];
+        }
+    }
+    
+    
+    cout << "\nTraffic Data:" << endl;
+    for (int i = 0; i < N; i++) {
+        cout << "Zone " << i + 1 << ": ";
+        for (int j = 0; j < M; j++) {
+            cout << trafficData[i][j] << " ";
+        }
+        cout << endl;
+    }
+    
+    return 0;
+}
